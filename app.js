@@ -102,7 +102,7 @@ app.use('/', userRoutes)
 app.use('/campgrounds', campgroundRoutes)
 app.use('/campgrounds/:id/reviews', reviewRoutes)
 
-app.get('/', (req, res) => {
+app.get('/', (req, res) => {npm 
    res.render('home')
 })
 
@@ -121,7 +121,7 @@ app.use((err, req, res, next) => {
 
 
 const port = process.env.PORT || 3000;
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log(`serving on port ${port}`)
 })
 
