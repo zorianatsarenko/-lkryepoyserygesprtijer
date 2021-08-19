@@ -27,6 +27,7 @@ const MongoDBStore = require('connect-mongo')(session);
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp'
 
 
+
 mongoose.connect(dbUrl,{
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -104,7 +105,7 @@ app.use('/campgrounds', campgroundRoutes)
 app.use('/campgrounds/:id/reviews', reviewRoutes)
 
 app.get('/', (req, res) => {
-   res.redirect('/campgrounds')
+   res.render('home')
 })
 
 
